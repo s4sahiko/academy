@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Ethnotech Academy</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            color: white;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-overlay h3 {
+            color: var(--secondary-color);
+            font-size: 24px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: var(--font-heading);
+        }
+
+        .gallery-overlay p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+        <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">ETHNOTECH<span> ACADEMY</span></a>
+                <div class="nav-links">
+                    <div class="nav-item">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="about-us.html">About Us</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Programs <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu glass">
+                            <div class="menu-category">
+                                <div class="menu-category-btn active" data-category="institutions">
+                                    For Institution <i class="fas fa-chevron-right"></i>
+                                </div>
+                                <div class="menu-category-btn" data-category="students">
+                                    For Students <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="menu-list">
+                                <div id="institutions-list" class="category-content">
+                                    <h4>Institutional Programs</h4>
+                                    <ul>
+                                        <li><a href="program-future-skills.html">Centre for Future Skills</a></li>
+                                        <li><a href="program-iifs.html">Indian Institute of Future Skills</a></li>
+                                        <li><a href="program-finishing-school.html">Finishing School</a></li>
+                                    </ul>
+                                </div>
+                                <div id="students-list" class="category-content" style="display: none;">
+                                    <h4>Student Programs</h4>
+                                    <ul>
+                                        <li><a href="program-undergraduate.html">Under Graduate Programs</a></li>
+                                        <li><a href="program-internships.html">Internship and Projects</a></li>
+                                        <li><a href="program-placements.html">Placements</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="gallery.html">Gallery</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="careers.html">Careers</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="contact-us.html">Contact Us</a>
+                    </div>
+                </div>
+                <a href="contact-us.html" class="btn btn-primary" style="padding: 12px 24px; font-size: 14px;">Apply
+                    Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" style="height: 50vh; background-image: url('assets/gallery/graduation.png');">
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1>Moments That <span>Inspire</span></h1>
+                <p>Glimpses into our journey of innovation, excellence, and shared success.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: var(--section-padding);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Our Event Gallery</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="assets/gallery/graduation.png" alt="Graduation Event">
+                    <div class="gallery-overlay">
+                        <h3>Convocation 2024</h3>
+                        <p>Celebrating the success of our bright graduates.</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/gallery/robotics_lab.png" alt="Robotics Lab">
+                    <div class="gallery-overlay">
+                        <h3>Innovators Lab</h3>
+                        <p>Students working on cutting-edge AI & Robotics projects.</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/gallery/ai_hall.png" alt="AI Research Hall">
+                    <div class="gallery-overlay">
+                        <h3>Advanced Research</h3>
+                        <p>Fostering deep learning and machine learning excellence.</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/gallery/workshop.png" alt="Workshop">
+                    <div class="gallery-overlay">
+                        <h3>Corporate Workshop</h3>
+                        <p>Industry experts sharing insights with future leaders.</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/gallery/coding_competition.png" alt="Coding Competition">
+                    <div class="gallery-overlay">
+                        <h3>Global Coding Challenge</h3>
+                        <p>Students showcasing their programming prowess.</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="assets/gallery/innovation_awards.png" alt="Innovation Awards">
+                    <div class="gallery-overlay">
+                        <h3>Excellence Awards</h3>
+                        <p>Recognizing outstanding student-led innovations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <section class="contact-cta">
+        <div class="container">
+            <div class="cta-box glass reveal">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Journey?</h2>
+                    <p>Join thousands of students who have transformed their careers with Ethnotech.</p>
+                </div>
+                <a href="contact-us.html" class="btn btn-primary">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo"
+                        style="color: white; margin-bottom: 20px; display: block;">ETHNO<span>TECH</span></a>
+                    <p style="color: rgba(255,255,255,0.7);">Building the workforce of tomorrow through
+                        innovation
+                        and
+                        education excellence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="program-future-skills.html">Centre for Future Skills</a></li>
+                        <li><a href="program-iifs.html">Indian Institute of Future Skills</a></li>
+                        <li><a href="program-undergraduate.html">Under Graduates</a></li>
+                        <li><a href="program-internships.html">Internship and Projects</a></li>
+                        <li><a href="program-placements.html">Placements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="faq.html">Faq</a></li>
+                        <li><a href="partnerships.html">Partner With Us</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p style="color: rgba(255,255,255,0.7);"><i class="fas fa-envelope"></i>
+                        info@ethnotech.in</p>
+                    <p style="color: rgba(255,255,255,0.7); margin-top: 10px;"><i class="fas fa-phone"></i>
+                        +91 080
+                        1234
+                        5678</p>
+                    <div class="social-links" style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#"><i class="fab fa-linkedin" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-twitter" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-instagram" style="font-size: 20px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ethnotech Academic Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
