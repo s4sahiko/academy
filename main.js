@@ -9,12 +9,62 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const navItem = link.parentElement;
+                const hasSubmenu = navItem.querySelector('.mega-menu');
+
+                if (window.innerWidth <= 768 && hasSubmenu) {
+                    e.preventDefault();
+                    navItem.classList.toggle('active');
+                } else {
+                    navLinks.classList.remove('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const isClickInsideMenu = navLinks.contains(e.target);
+            const isClickOnToggle = menuToggle.contains(e.target);
+
+            if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+
+
     // Mega Menu Category Switcher
     const categoryBtns = document.querySelectorAll('.menu-category-btn');
     const categoryContents = document.querySelectorAll('.category-content');
 
     categoryBtns.forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
+        btn.addEventListener('click', () => {
             const category = btn.getAttribute('data-category');
 
             // Update buttons
