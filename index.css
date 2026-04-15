@@ -952,40 +952,8 @@ footer {
     font-size: 18px;
 }
 
-/* Mission Gradient Section */
-.mission-gradient {
-    padding: 120px 0;
-    background: linear-gradient(90deg, #002147 0%, #052c52 40%, #889bb1 100%);
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.mission-gradient h2 {
-    font-size: 56px;
-    color: white !important;
-    margin-bottom: 25px;
-    font-weight: 800;
-}
-
-.mission-gradient h2 span {
-    color: var(--secondary-color);
-}
-
-.mission-gradient p {
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 800px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-}
-
-.mission-gradient .btn {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
 /* Responsive Fixes & Mobile Navigation */
+
 .mobile-nav-toggle {
     display: none;
     background: none;
