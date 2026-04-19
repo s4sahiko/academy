@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Partners | EthnoTech Academy</title>
+    <link href="index.css?v=14" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        .partners-section {
+            padding: var(--section-padding);
+            background: var(--bg-light);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .partner-card {
+            aspect-ratio: 3/2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 15px;
+            transition: var(--transition-smooth);
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .partner-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .partner-card img {
+            max-width: 85%;
+            max-height: 85%;
+            object-fit: contain;
+            transition: var(--transition-smooth);
+        }
+
+        .partner-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .section-header-alt {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        .section-header-alt h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .section-header-alt p {
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+
+        .partner-type-label {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255, 123, 0, 0.1);
+            color: var(--secondary-color);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body ontouchstart="">
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a class="logo" href="index.html">
+                    <svg class="logo-icon" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="currentColor" transform="translate(50, 50)">
+                            <g transform="rotate(0)">
+                                <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                            </g>
+                            <g transform="rotate(72)">
+                                <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                            </g>
+                            <g transform="rotate(144)">
+                                <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                            </g>
+                            <g transform="rotate(216)">
+                                <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                            </g>
+                            <g transform="rotate(288)">
+                                <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="logo-text">
+                        <span class="ethnotech">ETHNOTECH</span>
+                        <span class="academy">ACADEMY</span>
+                    </span>
+                </a>
+                <button class="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+                <div class="nav-links">
+                    <div class="nav-item">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="about-us.html">About Us</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Programs <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu glass">
+                            <div class="menu-category">
+                                <div class="menu-category-btn active" data-category="institutions">
+                                    For Institution <i class="fas fa-chevron-right"></i>
+                                </div>
+                                <div class="menu-category-btn" data-category="students">
+                                    For Students <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="menu-list">
+                                <div class="category-content" id="institutions-list">
+                                    <h4>Institutional Programs</h4>
+                                    <ul>
+                                        <li><a href="program-future-skills.html">Centre for Future Skills</a></li>
+                                        <li><a href="program-iifs.html">Indian Institute of Future Skills</a></li>
+                                        <li><a href="program-finishing-school.html">Finishing School</a></li>
+                                    </ul>
+                                </div>
+                                <div class="category-content" id="students-list" style="display: none;">
+                                    <h4>Student Programs</h4>
+                                    <ul>
+                                        <li><a href="program-undergraduate.html">Under Graduate Programs</a></li>
+                                        <li><a href="program-internships.html">Internship and Projects</a></li>
+                                        <li><a href="program-placements.html">Placements</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="gallery.html">Gallery</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="contact-us.html">Contact Us</a>
+                    </div>
+                    <a class="btn btn-primary" href="contact-us.html">Apply Now</a>
+                </div>
+                <a class="btn btn-primary" href="contact-us.html" style="padding: 12px 24px; font-size: 14px;">Apply
+                    Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero"
+        style="height: 50vh; background-image: linear-gradient(rgba(0,33,71,0.8), rgba(0,33,71,0.8)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=2000'); background-position: center; background-size: cover;">
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1>Our <span>Partners</span></h1>
+                <p>Collaborating with global industry leaders and prestigious institutions to deliver excellence in
+                    technical education.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-header-alt reveal">
+                <span class="partner-type-label">Educational Network</span>
+                <h2>Academic Partners</h2>
+                <p>We work with leading universities and colleges to implement industry-aligned curriculum and advanced
+                    training modules.</p>
+            </div>
+            <div class="partners-grid">
+                <!-- 19 Educational Partners -->
+                <div class="partner-card reveal"><img src="assets/epatners/image.png" alt="Educational Partner"></div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 2.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 3.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 4.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 5.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 6.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 7.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 8.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 9.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 10.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 11.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 12.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 13.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 14.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 15.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 16.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 17.png" alt="Educational Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/epatners/image copy 18.png" alt="Educational Partner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Partners Section -->
+    <section class="partners-section" style="background: white; border-top: 1px solid #eee;">
+        <div class="container">
+            <div class="section-header-alt reveal">
+                <span class="partner-type-label">Corporate Alliances</span>
+                <h2>Industry Partners</h2>
+                <p>Through our corporate tie-ups, we ensure our students have direct access to internships, projects,
+                    and recruitment opportunities at top-tier companies.</p>
+            </div>
+            <div class="partners-grid">
+                <!-- 27 Corporate Partners -->
+                <div class="partner-card reveal"><img src="assets/cpartners/image.png" alt="Corporate Partner"></div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 2.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 3.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 4.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 5.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 6.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 7.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 8.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 9.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 10.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 11.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 12.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 13.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 14.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 15.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 16.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 17.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 18.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 19.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 20.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 21.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 22.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 23.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 24.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 25.png" alt="Corporate Partner">
+                </div>
+                <div class="partner-card reveal"><img src="assets/cpartners/image copy 26.png" alt="Corporate Partner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-box glass reveal">
+                <div class="cta-content">
+                    <h2>Want to join our Network?</h2>
+                    <p>Learn more about how we collaborate with institutions and corporates to create impact.</p>
+                </div>
+                <a class="btn btn-primary" href="partnerships.html">Partner with Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a class="logo" href="#"
+                        style="color: white; margin-bottom: 20px; display: inline-flex; align-items: center;">
+                        <svg class="logo-icon"
+                            style="width: 28px !important; height: 28px !important; margin-right: 10px !important;"
+                            viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="currentColor" transform="translate(50, 50)">
+                                <g transform="rotate(0)">
+                                    <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                    <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                                </g>
+                                <g transform="rotate(72)">
+                                    <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                    <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                                </g>
+                                <g transform="rotate(144)">
+                                    <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                    <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                                </g>
+                                <g transform="rotate(216)">
+                                    <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                    <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                                </g>
+                                <g transform="rotate(288)">
+                                    <path d="M -4,-12 C -20,-20 -25,-40 -12,-48 C -5,-35 -2,-20 -4,-12"></path>
+                                    <path d="M 4,-12 C 20,-20 25,-40 12,-48 C 5,-35 2,-20 4,-12"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="logo-text">
+                            <span class="ethnotech" style="font-size: 20px !important;">ETHNOTECH</span>
+                            <span class="academy"
+                                style="font-size: 10px !important; letter-spacing: 3.5px !important; margin-top: 8px !important;">ACADEMY</span>
+                        </span>
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7);">Building the workforce of tomorrow through innovation and
+                        education excellence.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="program-future-skills.html">Centre for Future Skills</a></li>
+                        <li><a href="program-iifs.html">Indian Institute of Future Skills</a></li>
+                        <li><a href="program-undergraduate.html">Under Graduates</a></li>
+                        <li><a href="program-internships.html">Internship and Projects</a></li>
+                        <li><a href="program-placements.html">Placements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="faq.html">Faq</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p style="color: rgba(255,255,255,0.7);"><i class="fas fa-envelope"></i> info@ethnotech.in</p>
+                    <p style="color: rgba(255,255,255,0.7); margin-top: 10px;"><i class="fas fa-phone"></i> +91 080 1234
+                        5678</p>
+                    <div class="social-links" style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#"><i class="fab fa-linkedin" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-twitter" style="font-size: 20px;"></i></a>
+                        <a href="#"><i class="fab fa-instagram" style="font-size: 20px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EthnoTech Academic Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js?v=8"></script>
+</body>
+
+</html>
