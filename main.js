@@ -65,17 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close menu when a link is clicked
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', (e) => {
-                const navItem = link.parentElement;
-                const hasSubmenu = navItem.querySelector('.mega-menu');
+                const parent = link.parentElement;
+                const hasSubmenu = parent.classList.contains('nav-item') && parent.querySelector('.mega-menu');
 
                 if (window.innerWidth <= 768 && hasSubmenu) {
                     e.preventDefault();
-                    navItem.classList.toggle('active');
+                    parent.classList.toggle('active');
                 } else {
                     navLinks.classList.remove('active');
                     const icon = menuToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
                 }
             });
         });
